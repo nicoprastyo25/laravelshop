@@ -11,10 +11,16 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', function(){
+    return view('auth.login');
 });
 
 Auth::routes();
+//delete registration
+Route::match(["GET", "POST"], "/register", function(){
+    return redirect("/login");
+})->name("register");
+
 
 Route::get('/home', 'HomeController@index')->name('home');
+

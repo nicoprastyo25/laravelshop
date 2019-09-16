@@ -55,9 +55,9 @@
           <a href="#" class="dropdown-item">Setting</a>
           <div class="dropdown-divider"></div>
           <li>
-            <form action="{{route("logout")}}" method="POST">
-              @csrf
-              <button class="dropdown-item" style="cursor:pointer">Sign Out</button>
+          <form action="{{route("logout")}}" method="POST">
+            @csrf
+            <button class="dropdown-item" style="cursor:pointer">Sign Out</button>
             </form>
           </li>
         </div>
